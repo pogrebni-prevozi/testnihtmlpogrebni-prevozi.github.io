@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }} - {{ site.description }}{%
+        endif %}</title>
+    <meta name="description"
+        content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.description }}{% endif %}">
+    {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}">
+    {% endif %}
+    <link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta property="og:description"
+        content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}{{ site.og_image }}">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="{{ site.locale }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/favicon/apple-touch-icon.png">
+
+    {% if site.google_analytics %}
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+    </script>
+    {% endif %}
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FuneralHome",
+      "name": "{{ site.company_name }}",
+      "description": "{{ site.company_description }}",
+      "url": "{{ site.url }}",
+      "logo": "{{ site.url }}/assets/images/logo.png",
+      "image": "{{ site.url }}/assets/images/logo.png",
+      "telephone": "{{ site.phone }}",
+      "email": "{{ site.email }}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{{ site.address_street }}",
+        "addressLocality": "{{ site.address_city }}",
+        "postalCode": "{{ site.address_postal }}",
+        "addressCountry": "{{ site.address_country_code }}"
+      },
+      "areaServed": [
+        { "@type": "Country", "name": "Germany" },
+        { "@type": "Country", "name": "Austria" },
+        { "@type": "Country", "name": "Switzerland" },
+        { "@type": "Country", "name": "Slovenia" },
+        { "@type": "Country", "name": "Bosnia and Herzegovina" },
+        { "@type": "Country", "name": "Serbia" },
+        { "@type": "Country", "name": "Montenegro" }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "priceRange": "$$",
+      "foundingDate": "{{ site.established_year }}",
+      "sameAs": [
+        "{{ site.facebook }}",
+        "{{ site.website }}"
+      ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+</head>
+
+<body>
+    {% include header.html %}
+
+    <main>
+        {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+    <div class="mobile-cta-sticky">
+        <a href="tel:{{ site.phone }}" class="sticky-btn btn-phone">Pozovi</a>
+        <a href="https://wa.me/{{ site.whatsapp }}" class="sticky-btn btn-whatsapp">WhatsApp</a>
+    </div>
+</body>
+
+</html>

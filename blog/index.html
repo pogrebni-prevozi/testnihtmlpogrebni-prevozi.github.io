@@ -1,0 +1,48 @@
+﻿---
+layout: page
+title: "Blog i Savjeti"
+subtitle: "Korisne informacije, savjeti i vodiči o međunarodnom prevozu pokojnika"
+meta_description: "Čitajte naš blog o procedurama prevoza pokojnika, repatrijaciji, dokumentaciji i savjetima za
+porodice u teškim trenucima."
+keywords: "blog prevoz pokojnika, savjeti repatrijacija, procedure prevoza umrlih, vodič za transport pokojnika"
+---
+
+<section class="blog-intro">
+    <div class="container">
+        <p class="lead-text">
+            Naš cilj je da vam pružimo tačne i korisne informacije kako bismo vam olakšali proces
+            organizacije prevoza pokojnika. Ovdje ćete pronaći odgovore na najčešća pitanja,
+            objašnjenja procedura i savjete naših stručnjaka.
+        </p>
+    </div>
+</section>
+
+<section class="blog-posts-section">
+    <div class="container">
+        <div class="blog-grid">
+            {% for post in site.posts %}
+            <article class="blog-card">
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span class="blog-date">{{ post.date | date: "%d. %m. %Y" }}</span>
+                        {% if post.author %}
+                        <span class="blog-author"> | {{ post.author }}</span>
+                        {% endif %}
+                    </div>
+                    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+                    <p class="blog-excerpt">
+                        {% if post.description %}
+                        {{ post.description }}
+                        {% else %}
+                        {{ post.excerpt | strip_html | truncatewords: 30 }}
+                        {% endif %}
+                    </p>
+                    <a href="{{ post.url | relative_url }}" class="read-more">Pročitajte više →</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% include cta-section.html %}

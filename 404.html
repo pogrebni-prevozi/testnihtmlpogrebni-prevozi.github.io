@@ -1,0 +1,70 @@
+﻿---
+layout: default
+title: "404 - Stranica Nije Pronađena"
+meta_description: "Stranica koju tražite ne postoji. Vratite se na početnu stranicu ili kontaktirajte nas za pomoć."
+permalink: /404.html
+show_breadcrumbs: false
+---
+
+<section
+    style="padding: 6rem 2rem; text-align: center; min-height: 60vh; display: flex; align-items: center; justify-content: center;">
+    <div class="container">
+        <h1 style="font-size: 6rem; color: var(--color-gold); margin-bottom: 1rem;">404</h1>
+        <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Stranica nije pronađena</h2>
+        <p style="font-size: 1.2rem; color: var(--color-text-light); max-width: 600px; margin: 0 auto 3rem;">
+            Nažalost, stranica koju tražite ne postoji ili je premještena.
+            Molimo vas da provjerite URL ili se vratite na našu početnu stranicu.
+        </p>
+
+        <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <a href="{{ site.baseurl }}/" class="btn btn-primary btn-large">Početna Stranica</a>
+            <a href="{{ site.baseurl }}/usluge/" class="btn btn-secondary btn-large">Naše usluge</a>
+            <a href="{{ site.baseurl }}/kontakt/" class="btn btn-secondary btn-large">Kontakt</a>
+        </div>
+
+        <div
+            style="margin-top: 4rem; padding: 2rem; background: var(--color-light); border-radius: 8px; max-width: 600px; margin-left: auto; margin-right: auto;">
+            <h3 style="color: var(--color-primary); margin-bottom: 1rem;">Trebate Hitnu Pomoć?</h3>
+            <p style="margin-bottom: 1.5rem;">Za međunarodni prevoz pokojnika, dostupni smo 24/7:</p>
+            <a href="tel:{{ site.phone }}" style="font-size: 1.5rem; font-weight: 700; color: var(--color-gold);">{{
+                site.phone_display }}</a>
+        </div>
+    </div>
+</section>
+
+<section class="section-light" style="padding: 4rem 0;">
+    <div class="container">
+        <h2 class="section-title">Popularne stranice</h2>
+        <div class="services-grid">
+            <a href="{{ site.baseurl }}/" class="service-card">
+                <h3>Početna</h3>
+                <p>Upoznajte naše usluge međunarodnog prevoza pokojnika</p>
+            </a>
+
+            <a href="{{ site.baseurl }}/usluge/" class="service-card">
+                <h3>Naše Usluge</h3>
+                <p>Detaljan pregled svih usluga koje pružamo</p>
+            </a>
+
+            <a href="{{ site.baseurl }}/relacije/" class="service-card">
+                <h3>Relacije</h3>
+                <p>Sve zemlje i destinacije koje pokrivamo</p>
+            </a>
+
+            <a href="{{ site.baseurl }}/o-nama/" class="service-card">
+                <h3>O nama</h3>
+                <p>Naša priča, iskustvo i vrijednosti</p>
+            </a>
+
+            <a href="{{ site.baseurl }}/blog/" class="service-card">
+                <h3>Blog</h3>
+                <p>Korisni članci i vodiči</p>
+            </a>
+
+            <a href="{{ site.baseurl }}/kontakt/" class="service-card">
+                <h3>Kontakt</h3>
+                <p>Kontaktirajte nas za pomoć</p>
+            </a>
+        </div>
+    </div>
+</section>
