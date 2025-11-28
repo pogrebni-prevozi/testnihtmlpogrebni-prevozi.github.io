@@ -2,6 +2,8 @@
 title: Pogrebni Prevozi Edit Aljić
 description: Profesionalni međunarodni prevoz pokojnika i repatrijacija umrlih iz EU u BiH, Srbiju, Crnu Goru i sve države Balkana. Dostupni 24/7, kompletna dokumentacija, 15+ godina iskustva.
 url: https://pogrebni-prevozi.github.io
+# Ako je sajt na https://username.github.io/ime-repozitorija, postavite baseurl na "/ime-repozitorija"
+# Ako je sajt na https://username.github.io, ostavite baseurl prazan ""
 baseurl: ""
 
 # Contact Information
