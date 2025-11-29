@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://pogrebni-prevozi.github.io/sitemap.xml
